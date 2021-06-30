@@ -1,9 +1,11 @@
 from setuptools import setup
-import sys
+import platform
 import re
 
-if not sys.prefix.startswith("/data/data/com.termux/files/"):
-    raise RuntimeError("can install only with termux")
+
+if platform.machine() != "aarch64":
+    raise RuntimeError("can only be installed on aarch64.")
+
 
 version = ""
 with open("extractor/__init__.py") as f:
@@ -14,7 +16,7 @@ if not version:
 
 
 setup(
-    name="extractor",
+    name="structure_extractor",
     author="Lapis256",
     url="https://github.com/Lapis256/structure_extractor",
     version=version,

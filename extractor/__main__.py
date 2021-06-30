@@ -4,8 +4,7 @@ import argparse
 from .extractor import get_worlds
 
 
-WORLD_FOLDER = ("/data/data/com.termux/files/home/storage/"
-                "shared/games/com.mojang/minecraftWorlds")
+WORLD_FOLDER = "/storage/emulated/0/games/com.mojang/minecraftWorlds"
 
 
 def input_number(text, input_range):
